@@ -11,3 +11,4 @@ docker build -f Dockerfile --build-arg jar_name=target/prometheus-test-demo-0.0.
 docker tag  ${IMAGE_NAME}:${VERSION_ID}  ${IMAGE_ADDR}:${VERSION_ID}
 docker login --username=nju29 --password=nju292023 test-harbor.daocloud.io
 docker push ${IMAGE_ADDR}:${VERSION_ID}
+
