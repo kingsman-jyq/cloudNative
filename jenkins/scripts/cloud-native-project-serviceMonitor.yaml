@@ -16,4 +16,4 @@ spec:
       app: cloud-native-project
   namespaceSelector:
     matchNames:
-    - cn202006
+    - nju29

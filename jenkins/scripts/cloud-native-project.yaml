@@ -4,7 +4,7 @@ metadata:
   labels:
     app: cloud-native-project
   name: cloud-native-project
-  namespace: cn202006
+  namespace: nju29
 spec:
   replicas: 1
   selector:
@@ -21,16 +21,16 @@ spec:
         app: cloud-native-project
     spec:
       containers:
-      - image: harbor.edu.cn/cn202006/cloud-native-project:{VERSION}
+      - image: harbor.edu.cn/nju29/cloud-native-project:{VERSION}
         name: cloud-native-project
       imagePullSecrets:
-        - name: cn202006
+        - name: nju29
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: cloud-native-project
-  namespace: cn202006
+  namespace: nju29
   labels:
     app: cloud-native-project
 spec:
@@ -39,7 +39,7 @@ spec:
     app: cloud-native-project
   ports:
   - name: tcp
-    nodePort: 40000
     protocol: TCP
     port: 8080
     targetPort: 8080
+#    nodePort: 40000
